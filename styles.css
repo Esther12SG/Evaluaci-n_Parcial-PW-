@@ -1,0 +1,87 @@
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:#222;
+  background:#fafafa;
+  line-height:1.35;
+}
+
+#Dos_columnas_detalle 
+.layout{
+  display:grid;
+  grid-template-columns: 1fr 380px;
+  gap:12px;
+  padding:12px;
+}
+@media (max-width: 860px){
+  .layout{ grid-template-columns: 1fr; }
+}
+
+#izquierda
+.detalle{
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:10px;
+  padding:12px;
+}
+.detalle__media{ width:240px; max-width:100%; margin:4px 0 8px; }
+.detalle__img{
+  width:100%;
+  display:block;
+  border-radius:12px;
+  background: linear-gradient(135deg,#fde7f1 0%,#fbcfe8 70%,#f7c0df 100%);
+  padding:8px;
+}
+.detalle__title{ margin:4px 0 4px; font-size:20px; font-weight:800; }
+.detalle__id{ margin:0 0 8px; font-size:13px; color:#64748b; }
+
+.detalle__types{ display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px; }
+.detalle__types div{
+  font-size:12px; padding:3px 8px; border-radius:999px;
+  border:1px dashed #d7dde5;
+}
+
+.detalle__stats{ display:grid; gap:6px; }
+.stat{ display:grid; grid-template-columns:100px 1fr 36px; align-items:center; gap:6px; }
+.stat__name{ font-size:12px; font-weight:700; color:#334155; text-transform:uppercase; }
+.stat__bar{ height:8px; background:#eef2f7; border-radius:999px; position:relative; }
+.stat__bar-fill{ position:absolute; inset:0 auto 0 0; width:0%; background:#fb7185; border-radius:999px; transition:width .3s; }
+.stat__val{ text-align:right; font-size:12px; font-weight:700; }
+
+.buscador{ display:flex; gap:6px; margin-top:10px; }
+.buscador input{ flex:1; padding:8px; border:1px solid #d1d5db; border-radius:6px; }
+.buscador button{ padding:8px 10px; border:1px solid #d1d5db; background:#fff; border-radius:6px; cursor:pointer; }
+
+#derecha
+.lista{
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:10px;
+  padding:10px;
+  overflow:auto;
+}
+.lista__header{ display:flex; align-items:center; gap:8px; margin-bottom:6px; }
+.favfilter{ display:inline-flex; align-items:center; gap:6px; font-size:14px; }
+.btn{ padding:6px 8px; border:1px solid #d1d5db; background:#fff; border-radius:6px; cursor:pointer; }
+
+.listado{ list-style:none; padding:0; margin:0; }
+.item{
+  display:flex; align-items:center; gap:8px;
+  padding:6px 4px;
+  border-bottom:1px solid #f1f5f9;
+}
+.item__img{ width:40px; height:40px; object-fit:contain; border-radius:6px; background:#f4f6f9; }
+.item__name{ text-transform:capitalize; }
+.item__id{ width:46px; color:#6b7280; font-size:12px; }
+
+
+.item__fav{
+  margin-left:auto;
+  cursor:pointer;
+  font-size:16px;        
+  line-height:1;
+  color:#aaa;
+  user-select:none;
+}
+.item__fav[aria-pressed="true"]{ color:#e11d48; } /* ♥ rojo */

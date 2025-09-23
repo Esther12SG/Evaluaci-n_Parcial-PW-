@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pokémon App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="layout">
+  
+    <section class="detalle">
+      <div class="detalle__media">
+        <img class="detalle__img" src="poke.png" alt="pokemon" data-poke-img>
+      </div>
+
+      <h1 class="detalle__title" data-poke-name>Pokémon App</h1>
+      <p class="detalle__id" data-poke-id></p>
+
+      <div class="detalle__types" data-poke-types></div>
+      <div class="detalle__stats" data-poke-stats></div>
+
+      <form class="buscador" id="searchForm" onsubmit="searchPokemon(event)">
+        <input
+          type="text"
+          name="pokemon"
+          placeholder="Busca por nombre o #id (ej. pikachu o 25)"
+          required
+        />
+        <button type="submit">Buscar</button>
+      </form>
+    </section>
+
+
+    <section class="lista">
+      <header class="lista__header">
+        <h2>Lista (151)</h2>
+        <label class="favfilter">
+          <input id="onlyFavs" type="checkbox">
+          <span>Solo favoritos</span>
+        </label>
+        <button id="clearFavs" class="btn">Limpiar favs</button>
+      </header>
+
+      <ul id="listado" class="listado">
+
+      </ul>
+    </section>
+  </main>
+
+  <script src="pokemonapp.js"></script>
+</body>
+</html>

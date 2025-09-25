@@ -4,7 +4,7 @@ LLamado: Pokemonapp
 
 Funcionalidades
 
-Búsqueda de Pokémon** por nombre o ID.  
+Búsqueda de Pokémon: por nombre o ID.  
 Consumo de la API: usando `fetch` (PokeAPI).  
 Renderizado dinámico: nombre, imagen, tipos y estadísticas.  
 Favoritos: con persistencia en `localStorage`.  
